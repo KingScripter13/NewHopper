@@ -11,7 +11,7 @@ local ModelsToDetect = {
     ["Las Vaquitas Saturnitas"] = true,
     ["Pot Hotspot"] = true,
     ["Tortuginni Dragonfruitini"] = true,
-    ["Garama and Madundung"] = true,
+    ["Garama and Madundug"] = true,
     ["Nuclearo Dinossauro"] = true,
     ["La Grande Combinasion"] = true,
     ["Graipuss Medussi"] = true,
@@ -22,6 +22,7 @@ local ModelsToDetect = {
     ["Piccione Macchina"] = true,
     ["Los Crocodillitos"] = true,
     ["Orcalero Orcala"] = true,
+    --["Noobini Pizzanini"] = false,
 }
 
 local webhookUrl = "https://discord.com/api/webhooks/1398638277438738522/ZRPi5pBNGV-zOZsXZCsJdwYgVDl0grUOP1wgpN3PtMlwMWLxD2vWIQBDSnL_oAE6dzqp"
@@ -122,12 +123,13 @@ local function serverHop()
     end
 end
 
--- Başlangıçta kontrol et
+-- Başlangıçta kontrol et ve her durumda server hop yap
 spawn(function()
     if detectModels() then
-        wait(1)
-        serverHop()
+        print("🔍 Model detected on start, will hop server.")
     else
-        print("✅ No models detected on start.")
+        print("✅ No models detected on start, but will hop server anyway.")
     end
+    wait(1)
+    serverHop()
 end)
