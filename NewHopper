@@ -22,7 +22,6 @@ local ModelsToDetect = {
     ["Piccione Macchina"] = true,
     ["Los Crocodillitos"] = true,
     ["Orcalero Orcala"] = true,
-    ["Noobini Pizzanini"] = true,
 }
 
 local webhookUrl = "https://discord.com/api/webhooks/1398638277438738522/ZRPi5pBNGV-zOZsXZCsJdwYgVDl0grUOP1wgpN3PtMlwMWLxD2vWIQBDSnL_oAE6dzqp"
